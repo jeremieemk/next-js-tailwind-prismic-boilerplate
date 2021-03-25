@@ -8,9 +8,11 @@ export default function Home(props) {
       <Head>
         <title>My new iZem site</title>
       </Head>
-      <div>
-        <h1>Hello, world!</h1>
-        <button className="button">Start</button>
+      <div className="flex justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center h-screen">
+          <h1>Hello, world!</h1>
+          <button className="button">Start</button>
+        </div>
       </div>
     </>
   );
