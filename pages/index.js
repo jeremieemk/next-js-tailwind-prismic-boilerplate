@@ -6,14 +6,13 @@ export default function Home(props) {
   return (
     <>
       <Head>
-        <style>
-          {`
-            @font-face {
-            font-family: regular;
-            src: url("/fonts/bentonsansregular.otf");
-          }
-        `}
-        </style>
+        <link
+          rel="preload"
+          as="font"
+          href="/fonts/bentonsansregular.otf"
+          type="font/otf"
+          crossorigin="anonymous"
+        ></link>
         <title>My new iZem site</title>
       </Head>
       <div className="flex justify-center items-center h-screen">
