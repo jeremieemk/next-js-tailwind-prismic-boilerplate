@@ -17,8 +17,8 @@ export default function Home(props) {
       </Head>
       <div className="flex justify-center items-center h-screen">
         <div className="flex flex-col justify-center items-center">
-          <h1>Hello, world!</h1>
-          <button className="button">Start</button>
+          <h1 className="m-2">Hello, world!</h1>
+          <button className="button m-2">Start</button>
         </div>
       </div>
     </>
