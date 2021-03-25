@@ -6,10 +6,18 @@ export default function Home(props) {
   return (
     <>
       <Head>
+        <style>
+          {`
+            @font-face {
+            font-family: regular;
+            src: url("/fonts/bentonsansregular.otf");
+          }
+        `}
+        </style>
         <title>My new iZem site</title>
       </Head>
       <div className="flex justify-center items-center h-screen">
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center">
           <h1>Hello, world!</h1>
           <button className="button">Start</button>
         </div>
@@ -19,9 +27,11 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
+  // add your Prismic project
   const apiEndpoint = "https://izem-site-2021.cdn.prismic.io/api/v2";
   const Client = Prismic.client(apiEndpoint);
   const data = await Client.query(
+    // specify the data you're querying
     Prismic.Predicates.at("document.type", "blog-post")
   );
   const blogPosts = data.results;
