@@ -1,5 +1,6 @@
 import Prismic from "prismic-javascript";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function Home(props) {
   console.log(props);
@@ -13,14 +14,19 @@ export default function Home(props) {
           type="font/otf"
           crossorigin="anonymous"
         ></link>
-        <title>My new iZem site</title>
+        <title>My new site</title>
       </Head>
-      <div className="flex justify-center items-center h-screen">
+      <motion.div
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0 }}
+        className="flex justify-center items-center h-screen"
+      >
         <div className="flex flex-col justify-center items-center">
           <h1 className="m-2">Hello, world!</h1>
           <button className="button m-2">Start</button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
